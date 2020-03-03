@@ -1,2 +1,6 @@
-# aws_iot_core_workshop
-An workshop for AWS IoT Core
+# 软硬兼施，实战构建基于AWS IoT的物联网解决方案
+硬件准备
+===
+
+AWS服务相关准备
+===

@@ -16,7 +16,7 @@
 *	Amazon Simple Notification Service (Amazon SNS) ：AWS消息通知服务，在温度异常时，用于发送邮件通知
 *	Amazon Simple Storage Service (Amazon S3) ：对象存储服务，低成本存储物联网数据
 实现温度监控组件与AWS IoT Core服务的对接，整个Demo场景的架构如下图所示。<br>
-![](https://github.com/steelren/aws_iot_core_workshop/blob/master/pics/DemoArchitecture.png) <br>
+![](./pics/DemoArchitecture.png) <br>
 依据上述架构，设定的业务场景如下：<br>
 * 温度监测组件每5秒钟采集一次数据，包括设备号、时间和温度值，数据通过WIFI传输到AWS IoT Core云服务
 * AWS IoT Core云服务接收到温度监测组件传输的数据，做如下三种处理：

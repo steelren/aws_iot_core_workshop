@@ -144,7 +144,9 @@ void loop()
 <img src="./pics/lab2/arduinoupload.png">
 </p>
 在提示写入成功之后，代码就自动开始在ESP32开发板中开始运行了。<br>
-在菜单中选择Tools-Serial Monitor，就可以打开串口监控窗口，并且设定串口监视器的baud rate与之前设置的Upload Speed相同，比如115200，就可以看到开发板中程序的运行情况了。<br>
+在菜单中选择Tools-Serial Monitor，就可以打开串口监控窗口，并且设定串口监视器的Baud Rate与之前设置的Upload Speed相同，比如115200，就可以看到开发板中程序的运行情况了。<br>
 <p align="center"> 
 <img src="./pics/lab2/serialmonitor.png">
 </p>
+
+## 数据传输测试

@@ -5,6 +5,7 @@
 <p align="center"> 
 <img src="./pics/lab1/image006.png" width="60%">
 </p>
+
 在服务中找到物联网系列服务，点击***AWS IoT***，打开AWS IoT管理控制台。<br>
 <p align="center"> 
 <img src="./pics/lab1/image007.png" width="60%">
@@ -21,6 +22,7 @@
 <p align="center"> 
 <img src="./pics/lab1/image010.png" width="60%">
 </p>
+
 在这里我们选择***创建单个物品***按钮。创建单个物品共有三个步骤：<br>
 **第一步**，***将设备添加到物品注册表***<br>
 * 赋予所添加物品一个***名称***，比如IoTWorkshopThing
@@ -34,6 +36,7 @@
 <p align="center"> 
 <img src="./pics/lab1/image012.png" width="60%">
 </p>
+
 **第二步**，***添加物品的证书***<br>
 这里采用一键式创建证书方式，点击***创建证书***按钮。<br>
 <p align="center"> 
@@ -42,6 +45,7 @@
 <p align="center"> 
 <img src="./pics/lab1/image014.png" width="60%">
 </p>
+
 几秒钟之后，会弹出***证书已创建***界面，生成设备连接所需要的三个证书，包括：该物品的证书，公有密钥和私有密钥。点击***下载***，将证书保存到本地磁盘当中，以备后面的步骤使用。<br>
 此外，连接设备还需要AWS IoT的根CA证书，点击下载打开下载页面，这里建议下载RSA 2048 位密钥：Amazon Root CA 1， 将该证书同样保存到本地磁盘当中，以备后面的步骤使用。<br>
 点击***激活***按钮，使证书生效。<br>
@@ -52,6 +56,7 @@
 <p align="center"> 
 <img src="./pics/lab1/image015.png" width="60%">
 </p>
+
 物品成功注册后，后显示在物品列表当中。<br>
 <p align="center"> 
 <img src="./pics/lab1/image016.png" width="60%">
@@ -62,6 +67,7 @@
 <p align="center"> 
 <img src="./pics/lab1/image017.png" width="60%">
 </p>
+
 策略创建中填写如下信息：<br>
 * 为策略赋予一个***名称***，比如IoTWorkShopPolicy
 * 为策略添加声明，包括：
@@ -76,6 +82,7 @@
 <p align="center"> 
 <img src="./pics/lab1/image019.png" width="60%">
 </p>
+
 策略创建完成后，可在策略列表看到刚创建的策略。<br>
 
 ## 4. 为设备添加策略
@@ -87,12 +94,15 @@
 <p align="center"> 
 <img src="./pics/lab1/image021.png" width="60%">
 </p>
+
 在右上角操作菜单中，选择***附加策略***菜单。<br>
 <p align="center"> 
 <img src="./pics/lab1/image022.png" width="60%">
 </p>
+
 在打开的策略列表中选择一个或多个策略附加给当前证书，即可与设备进行关联。<br>
 <p align="center"> 
 <img src="./pics/lab1/image023.png" width="60%">
 </p>
+
 至此，一个设备就被注册到了AWS IoT Core的环境当中。<br>

@@ -26,6 +26,6 @@
 ## 方案构建
 构建基于AWS IoT的物联网解决方案包含如下几个步骤:<br>
 [Lab 1: 设备注册](./lab1.device.registration.md)<br>
-Lab 2: 设备链接与数据传输<br>
+Lab 2: 设备连接与数据传输<br>
 Lab 3: 数据存储与数据处理<br>
 Lab 4: 邮件告警<br>

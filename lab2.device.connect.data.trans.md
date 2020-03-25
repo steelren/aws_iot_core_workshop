@@ -152,11 +152,11 @@ void loop()
 ## 数据传输测试
 AWS IoT Core控制台提供了一个测试工具能够进行简单的MQTT客户端测试，我们利用他来验证一下ESP32开发板所发送的数据是否准备却的发送到了IoT Core当中。进入AWS IoT Core控制台，找到***测试***菜单，打开测试工具界面<br>
 <p align="center"> 
-<img src="./pics/lab2/image024.png">
+<img src="./pics/lab2/image024.png" width="60%">
 </p>
 在主界面左侧选择***订阅主题***，填写***订阅主题***名称，并点击***订阅主题***按钮。这里我们的订阅主题要填写上面代码中所采用的主题。<br>
 <p align="center"> 
-<img src="./pics/lab2/image025.png">
+<img src="./pics/lab2/image025.png" width="60%">
 </p>
 在出现的页面中，如果我们看到我们所填写的主题下，有不断刷新出来的由ESP32开发板所发送的json报文，则说明数据发送成功。<br>
 <p align="center"> 

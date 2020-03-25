@@ -1,4 +1,5 @@
 # Lab 2: 设备连接和数据传输
+
 ## 设备开发环境准备
 在本次Workshop当中，我们将使用ESP32开发板与LM35温度传感器构建的温度监测组件与AWS IoT平台进行对接需要对ESP32开发板进行编程，这里我们使用Arduino IDE编程工具通过C语言对ESP32进行开发。<br>
 Arduino是一款便捷灵活、方便上手的开源电子原型平台。包含硬件（各种型号的Arduino板）和软件（Arduino IDE)。Arduino IDE基于processing IDE开发。对于初学者来说，极易掌握，同时有着足够的灵活性。Arduino语言基于wiring语言开发，是对 AVR-GCC库的二次封装，不需要太多的单片机基础、编程基础，简单学习后，你也可以快速的进行开发。<br>
@@ -138,3 +139,12 @@ void loop()
 具体代码可参考[这里](https://github.com/steelren/aws_iot_core_workshop/blob/master/code/Esp32_LM35.ino)。<br>
 
 ## 代码写入开发板
+代码保存之后，在开发板连接到电脑的情况下，点击Arduino IDE工具栏上的***Upload***按钮。<br>
+<p align="center"> 
+<img src="./pics/lab2/arduinoupload.png">
+</p>
+在提示写入成功之后，代码就自动开始在ESP32开发板中开始运行了。<br>
+在菜单中选择Tools-Serial Monitor，就可以打开串口监控窗口，并且设定串口监视器的baud rate与之前设置的Upload Speed相同，比如115200，就可以看到开发板中程序的运行情况了。<br>
+<p align="center"> 
+<img src="./pics/lab2/serialmonitor.png">
+</p>

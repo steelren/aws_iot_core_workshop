@@ -4,4 +4,5 @@ AWS IoT Core规则由 SQL SELECT 语句、主题筛选条件和规则操作组�
 AWS IoT Core规则操作用于指定规则触发后应执行的操作。用户可以定义一些操作以便将数据写入 Amazon DynamoDB 数据库或 Amazon Kinesis 流，或者调用 Lambda 函数等。<br>
 在该业务场景中，我们使用AWS IoT Core规则触发两个操作，我们直接对AWS IoT Core所接收到的所有温度监测数据进行处理。<br>
 
+## 1. 创建规则
 

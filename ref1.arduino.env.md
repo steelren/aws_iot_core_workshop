@@ -1,4 +1,4 @@
-# IDE environment preparation
+# Arduino IDE environment preparation
 
 First up, we're gonna setup our development environment. We'll be using a piece of software called an Integrated Development Environment (IDE). This software will facilitate compiling, executing and debugging code directly on our ESP32 device. 
 

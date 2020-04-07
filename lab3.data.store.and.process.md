@@ -62,6 +62,8 @@ AWS IoT Core的规则支持多种操作，在接下来的操作中，我们选�
 设置S3存储桶中的恶***键***，Amazon S3中的数据是以键值对方式存储的，可以简单的理解为这个键就是存储在桶的文件的名字。这里我们可以设置如下键:<br>
 > ${state.reported.devid}:${state.reported.timestamp}.txt<br>
 > 表示使用报文中的设备ID和数据的时间戳作为文件的名称。<br>
+
+选择或者创建一个向AWS IoT授权进行Amazon S3操作的角色。<br>
 <p align="center"> 
 <img src="./pics/lab3/08.png" width="60%">
 </p>

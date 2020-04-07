@@ -88,7 +88,7 @@ exports.handler =  (event, context, callback) => {
 
 ```
 
-将node_modules目录，package.json文件和index.js文件打包为一个ZIP文件。使用AWS Lambda的上传功能进行上传。(如果您没有安装Node.js，还是不知道怎么给代码打包，您可以点击[这里](https://github.com/steelren/aws_iot_core_workshop/raw/master/code/SHIIoTDBFunction.zip)，下载一个我已经做好的ZIP包，将他上传到您的AWS Lambda当中，然后根据自己的需要修改代码即可。)<br>
+将node_modules目录，package.json文件和index.js文件打包为一个ZIP文件。使用AWS Lambda的上传功能进行上传。(如果您没有安装Node.js，或者不知道怎么给代码打包，您可以点击[这里](https://github.com/steelren/aws_iot_core_workshop/raw/master/code/SHIIoTDBFunction.zip)，下载一个我已经做好的ZIP包，将他上传到您的AWS Lambda当中，然后根据自己的需要修改代码即可。)<br>
 <p align="center"> 
 <img src="./pics/ref2/06.png" width="60%">
 </p>

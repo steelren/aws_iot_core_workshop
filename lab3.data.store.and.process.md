@@ -5,4 +5,44 @@ AWS IoT Core规则操作用于指定规则触发后应执行的操作。用户�
 在该业务场景中，我们使用AWS IoT Core规则触发两个操作，我们直接对AWS IoT Core所接收到的所有温度监测数据进行处理。<br>
 
 ## 1. 创建规则
+登录到AWS控制台之后，进入到AWS IoT Core控制台，在左侧的菜单列表中选择***行动-规则***，打开***规则***界面。<br>
+<p align="center"> 
+<img src="./pics/lab3/01.png" width="60%">
+</p>
+
+点击界面中的***创建***按钮，进行规则的创建。创建规则需要设置如下信息：<br>
+规则***名称***，输入该规则的名字。
+设置***规则查询语句***，使用类似SQL的语句，从AWS IoT Core的MQTT Topic当中提取数据，也是规则的触发条件，这里我们所设置的查询语句如下：
+> SELECT * FROM '$aws/things/SHIIoTThing/shadow/update/accepted' <br>
+> 这是设备影子的一个MQTT Topic，是指从设备发送到影子之后，被成功接收的数据，该语句是从该Topic上提取所有的消息数据，也就是说每次接收到一条设备消息，都会触发这个规则。<br>
+
+<p align="center"> 
+<img src="./pics/lab3/02.png" width="60%">
+</p>
+
+规则的查询语句设置完成之后，我们需要为规则添加操作，即规则被触发之后，需要执行的操作。<br>
+
+## 2. 添加操作
+在规则设置界面中，找到***设置一个或多个操作***，点击***添加操作***按钮。<br>
+<p align="center"> 
+<img src="./pics/lab3/03.png" width="60%">
+</p>
+
+AWS IoT Core的规则支持多种操作，在接下来的操作中，我们选择其中的两种: AWS Lambda和Amazon S3。<br>
+
+### 设置AWS Lambda操作
+在打开的操作列表中，选择***调用Lambda函数，传递消息数据***。<br>
+<p align="center"> 
+<img src="./pics/lab3/04.png" width="60%">
+</p>
+<p align="center"> 
+<img src="./pics/lab3/05.png" width="60%">
+</p>
+
+点击***配置操作***按钮。<br>
+在打开的配置操作界面中，选择我们之前配置好的Lambda函数，点击***添加操作***按钮，完成AWS Lambda函数操作的添加。
+<p align="center"> 
+<img src="./pics/lab3/06.png" width="60%">
+</p>
+
 

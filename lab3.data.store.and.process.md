@@ -31,7 +31,7 @@ AWS IoT Core规则操作用于指定规则触发后应执行的操作。用户�
 AWS IoT Core的规则支持多种操作，在接下来的操作中，我们选择其中的两种: AWS Lambda和Amazon S3。<br>
 
 ### 设置AWS Lambda操作
-我们设置一个AWS Lambda函数操作，将设备发送到AWS IoT Core的数据传递给Lambda函数，由这个函数将数据报文解析后，写入到MySQL数据库表当中。该函数的创建步骤参见[这里](https://github.com/steelren/aws_iot_core_workshop/blob/master/ref2.db.lambda.function.md)。<br>
+这里设置一个AWS Lambda函数操作，将设备发送到AWS IoT Core的数据传递给Lambda函数，由这个函数将数据报文解析后，写入到MySQL数据库表当中。该函数的创建步骤参见[这里](https://github.com/steelren/aws_iot_core_workshop/blob/master/ref2.db.lambda.function.md)。<br>
 在打开的操作列表中，选择***调用Lambda函数，传递消息数据***。<br>
 <p align="center"> 
 <img src="./pics/lab3/04.png" width="60%">
@@ -41,11 +41,33 @@ AWS IoT Core的规则支持多种操作，在接下来的操作中，我们选�
 </p>
 
 点击***配置操作***按钮。<br>
-在打开的配置操作界面中，选择我们之前配置好的Lambda函数，点击***添加操作***按钮，完成AWS Lambda函数操作的添加。<br>
+在打开的配置操作界面中，选择之前配置好的Lambda函数，点击***添加操作***按钮，完成AWS Lambda函数操作的添加。<br>
 <p align="center"> 
 <img src="./pics/lab3/06.png" width="60%">
 </p>
 
-### 设置Amazon S3操作
+添加完成后，我们可以到AWS Lambda函数页面，能够看到，函数增加了一个AWS IoT的触发器。
+<p align="center"> 
+<img src="./pics/lab3/09.png" width="60%">
+</p>
 
+### 设置Amazon S3操作
+这里设置一个Amazon S3操作，将设备发送到AWS IoT Core的数据以文件方式保存到S3的桶中。在打开的操作列表中，选择***在Amazon S3存储桶中存储消息***，并开始进行配置。<br>
+<p align="center"> 
+<img src="./pics/lab3/07.png" width="60%">
+</p>
+
+在打开的配置界面中，配置如下信息:<br>
+选择或者创建***S3存储桶***，这个桶是设备消息在Amazon S3中存储的位置。<br>
+设置S3存储桶中的恶***键***，Amazon S3中的数据是以键值对方式存储的，可以简单的理解为这个键就是存储在桶的文件的名字。这里我们可以设置如下键:<br>
+> ${state.reported.devid}:${state.reported.timestamp}.txt<br>
+> 表示使用报文中的设备ID和数据的时间戳作为文件的名称。<br>
+<p align="center"> 
+<img src="./pics/lab3/08.png" width="60%">
+</p>
+
+配置完成后，点击***添加操作***按钮，完成Amazon S3操作的添加。<br>
+这种消息的保存方式是每一条消息在S3的桶中保存一个文件，一般在生产环境中使用的比较少，更多的会使用AWS IoT Core的规则调用Amazon Kinesis，再将其存入S3。<br>
+
+至此，一个比较简单的配置处理和存储设备物联网数据的AWS IoT Core规则就配置完成了。当设备再将消息发送上来之后，我们就可以看一下，MySQL数据库表和S3桶中，是否已经保存好了数据和文件。<br>
 

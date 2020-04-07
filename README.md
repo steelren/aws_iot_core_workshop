@@ -44,4 +44,4 @@
 [Lab 1: 设备注册](./lab1.device.registration.md)<br>
 [Lab 2: 设备连接与数据传输](./lab2.device.connect.data.trans.md)<br>
 [Lab 3: 数据存储与数据处理](./lab3.data.store.and.process.md)<br>
-Lab 4: 邮件告警<br>
+[Lab 4: 邮件告警](./lab4.alarm.email.md)<br>

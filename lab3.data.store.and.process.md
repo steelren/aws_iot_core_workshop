@@ -31,6 +31,7 @@ AWS IoT Core规则操作用于指定规则触发后应执行的操作。用户�
 AWS IoT Core的规则支持多种操作，在接下来的操作中，我们选择其中的两种: AWS Lambda和Amazon S3。<br>
 
 ### 设置AWS Lambda操作
+我们设置一个AWS Lambda函数操作，将设备发送到AWS IoT Core的数据传递给Lambda函数，由这个函数将数据报文解析后，写入到MySQL数据库表当中。该函数的创建步骤参见[这里](https://github.com/steelren/aws_iot_core_workshop/blob/master/ref2.db.lambda.function.md)。<br>
 在打开的操作列表中，选择***调用Lambda函数，传递消息数据***。<br>
 <p align="center"> 
 <img src="./pics/lab3/04.png" width="60%">
@@ -40,9 +41,11 @@ AWS IoT Core的规则支持多种操作，在接下来的操作中，我们选�
 </p>
 
 点击***配置操作***按钮。<br>
-在打开的配置操作界面中，选择我们之前配置好的Lambda函数，点击***添加操作***按钮，完成AWS Lambda函数操作的添加。
+在打开的配置操作界面中，选择我们之前配置好的Lambda函数，点击***添加操作***按钮，完成AWS Lambda函数操作的添加。<br>
 <p align="center"> 
 <img src="./pics/lab3/06.png" width="60%">
 </p>
+
+### 设置Amazon S3操作
 
 

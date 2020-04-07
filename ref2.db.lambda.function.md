@@ -11,7 +11,7 @@
 选择***从头开始创作***<br>
 设置***函数名称***，为Lambda函数设置一个名字<br>
 设置***运行时***，这里我选择Node.js 10.x，通过Node.js代码来进行数据的处理<br>
-设置***执行角色***，该角色为执行Lambda函数的角色，用户也可以选择创建新的。这里我们选择***使用已有角色***，在下拉列表中选择lambda_basic_execution。
+设置***执行角色***，该角色为执行Lambda函数的角色，用户也可以选择创建新的。这里我们选择***使用已有角色***，在下拉列表中选择lambda_basic_execution。<br>
 <p align="center"> 
 <img src="./pics/ref2/02.png" width="60%">
 </p>
@@ -19,7 +19,7 @@
 <img src="./pics/ref2/03.png" width="60%">
 </p>
 
-设置完成之后，点击***创建函数***进行Lambda函数的创建，这样我们就创建了一个机遇Node.js 10.x的空Lambda函数。
+设置完成之后，点击***创建函数***进行Lambda函数的创建，这样我们就创建了一个机遇Node.js 10.x的空Lambda函数。<br>
 <p align="center"> 
 <img src="./pics/ref2/04.png" width="60%">
 </p>
@@ -31,19 +31,19 @@
 </p>
 
 首先，我们创建一个带有MySQL环境的Node.js包。<br>
-在安装了Node.js环境的主机当中，在命令行界面运行如下命令：
-> nmp install mysql
+在安装了Node.js环境的主机当中，在命令行界面运行如下命令：<br>
+> nmp install mysql<br>
 
 <p align="center"> 
 <img src="./pics/ref2/09.png" width="60%">
 </p>
 
-该命令会下载MySQL相关的Node.js运行时文件，在当前目录下生成一个node_modules目录和一个package文件。
+该命令会下载MySQL相关的Node.js运行时文件，在当前目录下生成一个node_modules目录和一个package文件。<br>
 <p align="center"> 
 <img src="./pics/ref2/10.png" width="60%">
 </p>
 
-因为在我们之前创建空Lambda函数中，***处理程序***是***index.handler***，所以这里我们在当前目录下创建一个index.js，该函数的内容如下：
+因为在我们之前创建空Lambda函数中，***处理程序***是***index.handler***，所以这里我们在当前目录下创建一个index.js，该函数的内容如下：<br>
 ```C
 // 引入MySQL运行环境和AWS SDK
 var mysql = require('mysql');
@@ -88,20 +88,20 @@ exports.handler =  (event, context, callback) => {
 
 ```
 
-将node_modules目录，package.json文件和index.js文件打包为一个ZIP文件。使用AWS Lambda的上传功能进行上传。
+将node_modules目录，package.json文件和index.js文件打包为一个ZIP文件。使用AWS Lambda的上传功能进行上传。<br>
 <p align="center"> 
 <img src="./pics/ref2/06.png" width="60%">
 </p>
 
-上传之后就可以看到导入的环境文件和代码。
+上传之后就可以看到导入的环境文件和代码。<br>
 <p align="center"> 
 <img src="./pics/ref2/07.png" width="60%">
 </p>
 
-点击***保存***按钮，保存AWS Lambda函数。
+点击***保存***按钮，保存AWS Lambda函数。<br>
 <p align="center"> 
 <img src="./pics/ref2/08.png" width="60%">
 </p>
 
-这样，一个处理IoT报文，并且将数据保存到MySQL数据库表的AWS Lambda函数，创建完成。
+这样，一个处理IoT报文，并且将数据保存到MySQL数据库表的AWS Lambda函数，创建完成。<br>
 
